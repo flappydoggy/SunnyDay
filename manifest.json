@@ -1,0 +1,19 @@
+{
+  "name": "Sunny Day",
+  "description": "Disable grayscale styles for Weibo and Bilibili.",
+  "version": "1.0",
+  "manifest_version": 3,
+  
+  "icons": {
+    "128": "128.png"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["https://*.weibo.com/*","https://*.bilibili.com/*"],
+	  "all_frames": true,
+      "js": ["contentScript.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
